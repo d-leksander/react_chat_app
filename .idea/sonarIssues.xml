@@ -3,6 +3,11 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="/Dummy.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/App.js">
           <value>
             <set />
@@ -14,6 +19,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/components/Chat/Chat.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/components/Chat/Chat.scss">
           <value>
             <set />
           </value>
@@ -33,6 +43,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/components/Input/Input.scss">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/components/Join/Join.css">
           <value>
             <set />
@@ -44,6 +59,26 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/components/Join/Join.scss">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/components/Messages/Message/Message.css">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/components/Messages/Message/Message.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/components/Messages/Messages.css">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/components/Messages/Messages.js">
           <value>
             <set />
           </value>
