@@ -28,7 +28,17 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/components/InfoBar/InfoBar.css">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/components/InfoBar/InfoBar.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/components/InfoBar/InfoBar.scss">
           <value>
             <set />
           </value>
@@ -79,6 +89,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/components/Messages/Messages.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/components/TextContainer/TextContainer.css">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/components/TextContainer/TextContainer.js">
           <value>
             <set />
           </value>
