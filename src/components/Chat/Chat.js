@@ -9,37 +9,38 @@ import Input from "../Input/Input";
 import Messages from '../Messages/Messages';
 import TextContainer from '../TextContainer/TextContainer';
 
+
 let socket;
 
 const Chat = ({ location }) => {
     const [name, setName] = useState("");
-    const [room, setRoom] = useState("");
+    const [group, setGroup] = useState("");
     const [users, setUsers] = useState("");
     const [message, setMessage] = useState("");
     const [messages, setMessages] = useState([]);
     const END_POINT = "localhost:5000";
 
     useEffect(() => {
-        const { name, room } = querystring.parse(location.search);
+        const { name, group } = querystring.parse(location.search);
 
         socket = io(END_POINT);
 
         setName(name);
-        setRoom(room);
+        setGroup(group);
 
-        socket.emit("join", { name, room }, error => {
+        socket.emit("join", { name, group }, error => {
             if (error) {
                 alert(error);
             }
         });
-    }, [END_POINT, location.search]); // (44:50) we have only one new connection
+    }, [END_POINT, location.search]);
 
     useEffect(() => {
         socket.on("message", (message) => {
             setMessages([...messages, message]);
         });
 
-        socket.on("roomData", ({ users }) => {
+        socket.on("groupData", ({ users }) => {
             setUsers(users);
         });
 
@@ -47,13 +48,12 @@ const Chat = ({ location }) => {
             socket.emit("disconnect");
             socket.off();
         };
-    }, [messages]); // userEffect React.DependecyList
+    }, [messages]);
 
     // function for sending messages
     const sendMessage = (event) => {
         event.preventDefault();
         if (message) {
-            // (1:14:27)
             socket.emit("sendMessage", message, () => setMessage(""));
         }
     };
@@ -62,20 +62,13 @@ const Chat = ({ location }) => {
     return (
         <div className="outerContainer">
             <div className="container">
-                <InfoBar room={room} />
+                <InfoBar group={group} />
                 <Messages messages={messages} name={name} />
                 <Input
                     message={message}
                     setMessage={setMessage}
                     sendMessage={sendMessage}
                 />
-                {/* <input
-          value={message}
-          onChange={event => setMessage(event.target.value)}
-          onKeyPress={event =>
-            event.key === "Enter" ? sendMessage(event) : null
-          }
-        /> */}
             </div>
             <TextContainer users={users}/>
         </div>

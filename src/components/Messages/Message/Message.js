@@ -2,7 +2,7 @@ import React from "react";
 
 import "./Message.css";
 
-// (01:43:30)
+
 import ReactEmoji from "react-emoji";
 
 const Message = ({ message: { text, user }, name }) => {

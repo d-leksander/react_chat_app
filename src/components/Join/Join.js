@@ -5,7 +5,7 @@ import "./Join.css";
 
 const Join = () => {
     const [name, setName] = useState("");
-    const [room, setRoom] = useState("");
+    const [group, setGroup] = useState("");
 
     return (
         <div className="joinOuterContainer">
@@ -14,7 +14,7 @@ const Join = () => {
                     Select a group and join the chat </p></h1>
                 <div>
                     <input
-                        placeholder="Name"
+                        placeholder="Nick"
                         className="joinInput"
                         type="text"
                         onChange={event => setName(event.target.value)}
@@ -22,15 +22,15 @@ const Join = () => {
                 </div>
                 <div>
                     <input
-                        placeholder="Room"
+                        placeholder="Group"
                         className="joinInput mt-20"
                         type="text"
-                        onChange={event => setRoom(event.target.value)}
+                        onChange={event => setGroup(event.target.value)}
                     />
                 </div>
                 <Link
-                    onClick={event => (!name || !room ? event.preventDefault() : null)}
-                    to={`/chat?name=${name}&room=${room}`}
+                    onClick={event => (!name || !group ? event.preventDefault() : null)}
+                    to={`/chat?name=${name}&group=${group}`}
                 >
                     <button className="button mt-20" type="submit">
                         Sign In

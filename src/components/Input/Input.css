@@ -23,10 +23,12 @@
     border: none;
     width: 20%;
 }
+.sendButton:hover {
+    background: #1000ff;
+}
 
 input:focus,
 textarea:focus,
 select:focus {
     outline: none;
 }
-/*# sourceMappingURL=Input.css.map */
