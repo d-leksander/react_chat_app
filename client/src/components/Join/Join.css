@@ -56,7 +56,7 @@ body {
 }
 
 .button {
-    color: #d3d3d3;
+    color: #d3d3d3 !important;
     text-transform: uppercase;
     text-decoration: none;
     background: #2977ff;
@@ -77,4 +77,3 @@ body {
 .button:hover {
     background: #1000ff;
 }
-/*# sourceMappingURL=Join.css.map */
